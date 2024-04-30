@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - Ysys Info Services</title>
+    @*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RazorWebAPP.styles.css" asp-append-version="true" /> *@
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ysys Info Services</title>
+    <link rel="canonical" href="https://ysysinfoservices.com/">
+    <link type="text/css" rel="preload" href="~/css/style.css" as="style">
+    <link type="text/css" rel="stylesheet" href="~/css/style.css">
+    <link rel="shortcut icon" href="~/image/favicon.png">
+    <link rel="shortcut icon" href="~/image/favicon.ico">
+    <link rel="preconnect" href="~/video/Evince_Website_Banner.mp4">
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+    @Html.Partial("/Views/Shared/_Header.cshtml")
+    @RenderBody()
+    <script defer type="text/javascript" src="~/js/vendor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer type="text/javascript" src="~/js/scripts.js"></script>
+    <script defer type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.location.hostname !== "evincedev.com") {
+                var metaTag = document.createElement('meta');
+                metaTag.name = 'robots';
+                metaTag.content = 'noindex,nofollow';
+                document.head.appendChild(metaTag);
+            }
+        });
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie'),
+            renderer: 'svg', // You can also use 'canvas' as the renderer
+            loop: true,
+            autoplay: true,
+            path: '~/video/EvinceDev.json',
+        });
+
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"87184c5a4d8c856b","version":"2024.3.0","token":"4c8953a65b7c42abac031b0155f1e4e2"}' crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
